@@ -1,7 +1,7 @@
 import torch
 
 
-class CausalAttention(nn.Module):
+class CausalAttention(torch.nn.Module):
   # d_in -> dimension of each word
   # d_out -> dimension of output word
   # context length -> how much words it can remember (memory size)
@@ -48,3 +48,4 @@ class CausalAttention(nn.Module):
 
     context_vec = attn_weights @ values
     return context_vec
+  
