@@ -15,14 +15,14 @@ class DummyGPTModel(nn.Module):
 		
 		# create n_layer number of transformer layers
 		self.trf_blocks = nn.Sequential(
-		    *[
-		        DummyTransformerBlock(cfg)
-		        for _ in range(cfg["n_layers"])
-		    ]
+		    # *[
+		    #     DummyTransformerBlock(cfg)
+		    #     for _ in range(cfg["n_layers"])
+		    # ]
 		)
 		
 		# normalize 
-		self.final_norm = DummyLayerNorm(cfg["emb_dim"])
+		# self.final_norm = DummyLayerNorm(cfg["emb_dim"])
 		
 		# nn.liner do -> output = input × weight + bias
 		# means it transforms one vector into another.
